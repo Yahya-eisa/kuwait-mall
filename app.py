@@ -73,7 +73,7 @@ def classify_city(city):
     return "Other City"
 
 # ---------- PDF table builder ----------
-def df_to_pdf_table(df, title="FLASH"):
+def df_to_pdf_table(df, title="kuwait-mall"):
     if "اجمالي عدد القطع في الطلب" in df.columns:
         df = df.rename(columns={"اجمالي عدد القطع في الطلب": "عدد القطع"})
 
@@ -120,7 +120,7 @@ def df_to_pdf_table(df, title="FLASH"):
 
     tz = pytz.timezone('Africa/Cairo')
     today = datetime.datetime.now(tz).strftime("%Y-%m-%d")
-    title_text = f"kuwait-mall {title} | kuwait-mall | {today}kuwait-mall "
+    title_text = f"kuwait-mall {title} | kuwait-mall | {today} "
 
     elements = [
         Paragraph(fix_arabic(title_text), styleTitle),
@@ -213,6 +213,7 @@ if uploaded_files:
             file_name=file_name,
             mime="application/pdf"
         )
+
 
 
 
