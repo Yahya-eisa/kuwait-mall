@@ -129,7 +129,7 @@ def df_to_pdf_table(df, title="kuwait-mall"):
 
     table = Table(data, colWidths=col_widths[:len(df.columns)], repeatRows=1)
     table.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#008000")),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#90EE90")),
         ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
         ('GRID', (0, 0), (-1, -1), 0.25, colors.black),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
@@ -213,6 +213,7 @@ if uploaded_files:
             file_name=file_name,
             mime="application/pdf"
         )
+
 
 
 
